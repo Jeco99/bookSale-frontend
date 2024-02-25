@@ -6,7 +6,7 @@ export default [
         error:'Book Name is required!'
     },
     {
-        id:'auhtor_name',
+        id:'author',
         type:'text',
         labelName:'Author Name:',
         error:'Author Name is required!'
@@ -25,7 +25,7 @@ export default [
     },
     {
         id:'price',
-        type:'text',
+        type:'number',
         labelName:'Price',
         error:'Price is required!'
     },
