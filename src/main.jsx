@@ -12,6 +12,7 @@ import Dashboard from "./pages.jsx/dashboard.jsx";
 import ManageBook from "./pages.jsx/managebook.jsx";
 import Add_BookForm from "./component/add_book/add_book.jsx";
 import MainPage from "./pages.jsx/index.jsx";
+ import { BookLoader as bookData } from "./utils/dataExtract.js";
 
 const router = createBrowserRouter([
   {
@@ -20,16 +21,17 @@ const router = createBrowserRouter([
     errorElement: <ErrorPage />,
     children:[
       {
-        path: "/dashboard",
+        path: "dashboard",
         element: <Dashboard/>,
       },
       {
-        path: "/addbook",
+        path: "addbook",
         element: <Add_BookForm />,
       },
       {
-        path: "/managebook",
+        path: "managebook",
         element: <ManageBook />,
+        loader: bookData,
       },
     ]
   },
