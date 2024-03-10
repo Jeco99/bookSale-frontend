@@ -12,16 +12,25 @@ import Dashboard from "./pages.jsx/dashboard.jsx";
 import ManageBook from "./pages.jsx/managebook.jsx";
 import Add_BookForm from "./component/add_book/add_book.jsx";
 import MainPage from "./pages.jsx/index.jsx";
- import { BookLoader as bookData } from "./utils/dataExtract.js";
+import { BookLoader as bookData } from "./utils/dataExtract.js";
+
+// import DeleteBook from "./component/deletebook/deletebook.jsx";
+import LogIn_Page from "./pages.jsx/logIn.jsx";
 
 const router = createBrowserRouter([
   {
-    path: "/",
+    path:'/',
+    element: <LogIn_Page />,
+    errorElement: <ErrorPage />,
+  
+  },
+  {
+    path: ":id/dashboard",
     element: <MainPage/>,
     errorElement: <ErrorPage />,
     children:[
       {
-        path: "dashboard",
+        path: ":id/dashboard",
         element: <Dashboard/>,
       },
       {
@@ -33,8 +42,13 @@ const router = createBrowserRouter([
         element: <ManageBook />,
         loader: bookData,
       },
+      // {
+      //   path:":_id/deletebook",
+      //   element: <DeleteBook />
+      // }
     ]
   },
+ 
   // {
   //   path: "/dashboard",
   //   element: <Dashboard />,

@@ -14,11 +14,11 @@ export default function Sidebar_Component() {
             Dashboard
           </Sidebar.Item>
           </Link>
-<Link to={'/addbook'}><Sidebar.Item href="#" icon={HiUser}>
+<Link to={':id/addbook'}><Sidebar.Item href="#" icon={HiUser}>
             Add Book
           </Sidebar.Item></Link>
           
-          <Link to={'/managebook'}><Sidebar.Item href="#" icon={HiShoppingBag}>
+          <Link to={':id/managebook'}><Sidebar.Item href="#" icon={HiShoppingBag}>
             Manage Books
           </Sidebar.Item></Link>
           
